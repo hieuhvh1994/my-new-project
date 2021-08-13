@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Tạo Form Đơn Giản</title>
+        <style>
+            .textbox1 {
+                color: blue;
+                font-family:'Times New Roman', Times, serif;
+            }
+
+            .checkbox1 {
+                color: orange;
+            }
+
+            .textbox2 {
+                color:  blue;
+                font-family:'Times New Roman', Times, serif;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--PART 1-->
+        <form>
+            <fieldset style="width:330px">
+                <table class="textbox1">
+                    <tr>
+                        <td colspan="2" style="text-align: center;"><legend style="color: white; font-size: 25px; background-color: orange;">SỞ THÍCH CỦA BẠN</legend></td>
+                    </tr>  
+                    <tr>
+                        <td>Họ và tên</td>
+                        <td><input type ="text" name ="yourname" size="30"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type ="text" name ="email" size="20"><br></td>
+                    </tr>
+                </table>
+                <table class="checkbox1">
+                    <tr>
+                        <td style="color: blue;">Sở thích</td>
+                        <td><label><input name="hobby" value="sport" type="checkbox"/>Thể thao</label></td>
+                        <td><label><input name="hobby" value="music" type="checkbox"/>Âm nhạc</label></td>
+                        <td><label><input name="hobby" value="reading" type="checkbox"/>Đọc sách</label></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><label><input name="hobby" value="internet" type="checkbox"/>Lướt web</label></td>
+                        <td><label><input name="hobby" value="game" type="checkbox"/>Chơi game</label></td>
+                        <td><label><input name="hobby" value="movie" type="checkbox"/>Điện ảnh</label></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><label><input name="hobby" value="travel" type="checkbox"/>Du lịch</label></td>
+                    </tr>
+                </table>
+                <div style="text-align: center;">
+                    <input type="submit" value="Gửi thông tin"/></td>
+                    <input type="reset" value="Nhập lại"/></td>
+                </div>
+            </fieldset>
+        </form>
+
+
+        <!--PART 2-->
+        <form>
+            <fieldset style="width:500px; background-color: rgb(255, 222, 115);">
+                <table class="textbox2">
+                    <tr>
+                        <td colspan="2" style="text-align: left;"><legend style="color: blue; font-size: 25px; background-color: rgb(98, 232, 255);">ĐĂNG KÝ HỌC VIÊN</legend></td>
+                    </tr>  
+                    <tr>
+                        <td>Họ và tên</td>
+                        <td><input type ="text" name ="yourname" size="40"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày sinh</td>
+                        <td><input type ="text" name ="email" size="25"><br></td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td style="color: blue;">Giới tính</td>
+                        <td><input name="sex" value="male" type="radio"/>Nam</td>
+                        <td><input name="sex" value="female" type="radio"/>Nữ</td>
+                    </tr>
+                </table>
+
+                <table class="textbox2">
+                    <tr>
+                        <td>Địa chỉ</td>
+                        <td><textarea name="address" style="width: 300px" rows="3"></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td>Lớp</td>
+                        <td>
+                            <select name="class">
+                                <option value="ClassChoiceDefault">-- Chọn lớp --</option>
+                                <option value="CCNA">CCNA</option>
+                                <option value="Python">Python</option>
+                                <option value="Java">Java</option>
+                                <option value="PHP">PHP</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type ="text" name ="email"><br></td>
+                    </tr>
+
+                    <tr>
+                        <td>Điện thoại</td>
+                        <td><input type ="text" name ="telephone"><br></td>
+                    </tr>
+
+                </table>
+
+                <div style="text-align: center;">
+                    <input type="submit" value="Đăng ký"/></td>
+                    <input type="reset" value="Nhập lại"/></td>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
