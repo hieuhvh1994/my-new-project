@@ -1,0 +1,52 @@
+body {
+    max-width: 800px;
+    max-height: 800px;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+}
+
+.table1 {
+    width: 100%;
+    height: 300px;
+    border-collapse: collapse;
+}
+
+tr, td, th {
+    text-align: center;
+    width: 50px;
+}
+
+.table1 .red {
+    background-color: red;
+    color: white;
+}
+
+.table1 .orange {
+    background-color: orange;
+    color: white;
+}
+
+.table1 .blue {
+    background-color: blue;
+    color: white;
+}
+
+.table1 .sunday {
+    color: red;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.table1 .normday {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.table1 .saturday {
+    color: blue;
+    font-size: larger;
+    font-weight: bold;
+}
