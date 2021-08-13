@@ -1,0 +1,26 @@
+body {
+    max-width: 800px;
+    max-height: 800px;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+}
+
+.table1 {
+    color: rgba(0, 115, 223, 0.671);
+    width: 100%;
+}
+
+.table2 {
+    height: 200px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td, th {
+    text-align: center;
+
+}
