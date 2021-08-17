@@ -1,0 +1,12 @@
+table {
+    border: 1px solid black;
+}
+
+input[type="button"] {
+    background-color: #758f8f;
+    color: black;
+    border: solid black 2px;
+    width:100%;
+    text-align: center;
+    font-weight: 900;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+    <link rel="stylesheet" type="text/css" href="UngDungMayTinh.css">
+</head>
+<body>
+    <h1>Caculator</h1>
+
+        <table>
+            <tr>
+                <td colspan="3"><input type="text" id ="result"></td>
+                <td><input type="button" value="c" onclick="clr()"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="btn('1')"/> </td>
+                <td><input type="button" value="2" onclick="btn('2')"/> </td>
+                <td><input type="button" value="3" onclick="btn('3')"/> </td>
+                <td><input type="button" value="/" onclick="btn('/')"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="btn('4')"/> </td>
+                <td><input type="button" value="5" onclick="btn('5')"/> </td>
+                <td><input type="button" value="6" onclick="btn('6')"/> </td>
+                <td><input type="button" value="-" onclick="btn('-')"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="btn('7')"/> </td>
+                <td><input type="button" value="8" onclick="btn('8')"/> </td>
+                <td><input type="button" value="9" onclick="btn('9')"/> </td>
+                <td><input type="button" value="+" onclick="btn('+')"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="btn('.')"/> </td>
+                <td><input type="button" value="0" onclick="btn('0')"/> </td>
+                <td><input type="button" value="=" onclick="solve()"/> </td>
+                <td><input type="button" value="*" onclick="btn('*')"/> </td>
+            </tr>
+        </table>
+
+<script src="UngDungMayTinh.js"></script>
+</body>
+</html>
