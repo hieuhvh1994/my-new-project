@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+}
+
+table tr td {
+    text-align: center;
+}
+#ConBtn {
+    background-color: #7342ff;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+
+#amount {
+    height: 25px;
+}
+
+#from {
+    width: 100px;
+    height: 30px;
+}
+
+#to {
+    width: 100px;
+    height: 30px;
+}
+
+#result_p {
+    color: blue;
+}
+
+#ConBtn {
+    text-align: center;
+    font-weight: 900;
+}

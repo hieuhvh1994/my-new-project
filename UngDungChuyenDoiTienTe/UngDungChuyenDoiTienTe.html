@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <link rel="stylesheet" type="text/css" href="UngDungChuyenDoiTienTe.css">
+</head>
+<body>
+    <form id="form1">
+        <table>
+            <tr>
+                <th><label for="amount">Amount</label></th>
+                <th><label for="from">From Currency</label></th>
+                <th><label for="to">To Currency</label></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="amount" name="currency"></td>
+                <td>
+                    <select id="from" name="currency">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="to" name="currency">
+                        <option value="USD">USD</option>
+                        <option value="VND">VND</option>
+                    </select>
+                </td>
+                <td><input id="ConBtn" onclick="convertCur()" value="Convert"></td>
+            </tr>
+        </table>
+        <br/>
+        <p id="result_p"></p>
+    </form>
+
+<script src="UngDungChuyenDoiTienTe.js"></script>
+</body>
+</html>
