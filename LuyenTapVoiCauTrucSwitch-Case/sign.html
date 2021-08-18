@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập với cấu trúc switch-case Bài 3</title>
+</head>
+<body>
+  <script>
+    let value = parseInt(prompt('Type a number', 0));
+
+
+
+    switch (value > 0) {
+      case (true):
+        alert(1);
+        break;
+      case (false):
+        switch (value < 0) {
+          case (true):
+            alert(-1);
+            break;
+          case (false):
+            alert(0);
+            break;
+          default:
+            break;
+        }
+        default:
+          break;
+    }
+
+  </script>
+</body>
+</html>
