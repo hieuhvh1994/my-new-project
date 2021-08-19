@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02 Bài 10</title>
 </head>
 <body>
-$END$
+<script>
+    let bill = parseInt(prompt("Enter bill (VND): "))
+    let level_1 = 0;
+    let level_2 = 0;
+    let level_3 = 0;
+    let level_4 = 0;
+    let level_5 = 0;
+    let level_6 = 0;
+
+    if (bill<=83900) {
+        level_1 = parseInt(83900/50)
+    } else if (bill<= 170600) {
+        level_1 = parseInt(83900/50)
+        level_2 = parseInt((170600-83900)/50)
+        alert(level_2)
+    } else if (bill<=372000) {
+        level_1 = parseInt(83900/50)
+        level_2 = parseInt((170600-83900)/50)
+        level_3 = parseInt((372000-170600-83900)/50)
+    } else if (bill<=625600) {
+        level_1 = parseInt(83900/50)
+        level_2 = parseInt((170600-83900)/50)
+        level_3 = parseInt((372000-170600-83900)/50)
+        level_4 = parseInt((625600-372000-170600-83900)/50)
+    } else if (bill<=909000) {
+        level_1 = parseInt(83900/50)
+        level_2 = parseInt((170600-83900)/50)
+        level_3 = parseInt((372000-170600-83900)/50)
+        level_4 = parseInt((625600-372000-170600-83900)/50)
+        level_5 = parseInt((909000-625600-372000-170600-83900)/50)
+    } else if (bill > 909000) {
+        level_1 = parseInt(83900/50)
+        level_2 = parseInt((170600-83900)/50)
+        level_3 = parseInt((372000-170600-83900)/50)
+        level_4 = parseInt((625600-372000-170600-83900)/50)
+        level_5 = parseInt((909000-625600-372000-170600-83900)/50)
+        level_6 = parseInt(911972-909000)
+    }
+
+    document.write("Bill is calculated by:"
+        + "</br>Level 1: " + level_1 + " đ"
+        + "</br>Level 2: " + level_2 + " đ"
+        + "</br>Level 3: " + level_3 + " đ"
+        + "</br>Level 4: " + level_4 + " đ"
+        + "</br>Level 5: " + level_5 + " đ"
+        + "</br>Level 6: " + level_6 + " đ")
+
+</script>
 </body>
 </html>

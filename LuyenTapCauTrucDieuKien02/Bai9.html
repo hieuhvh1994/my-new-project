@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02 Bài 9</title>
 </head>
 <body>
-$END$
+<script>
+    let a = parseFloat(prompt("Side a: "))
+    let b = parseFloat(prompt("Side b: "))
+    let c = parseFloat(prompt("Side c: "))
+
+    if (a>0 && b>0 && c>0 && a+b>c && b+c>a && a+c>b) {
+        alert("Triangle confirmed")
+    } else {
+        alert("Not Triangle")
+    }
+</script>
 </body>
 </html>
