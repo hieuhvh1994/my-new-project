@@ -15,20 +15,20 @@
     let level_4 = 2536;
     let level_5 = 2834;
     let level_6 = 2972;
-    let cost=0;
+    let bill=0;
 
     if (consumed<51) {
-        cost= consumed*level_1
+        bill= consumed*level_1
     } else if (consumed<101) {
-        cost= (50*level_1) + ((consumed-50)*level_2)
+        bill= (50*level_1) + ((consumed-50)*level_2)
     } else if (consumed<201) {
-        cost= (50*level_1) + (50*level_2) + ((consumed-100)*level_3)
+        bill= (50*level_1) + (50*level_2) + ((consumed-100)*level_3)
     } else if (consumed<301) {
-        cost= (50*level_1) + (50*level_2) + (100*level_3) + ((consumed-200)*level_4)
+        bill= (50*level_1) + (50*level_2) + (100*level_3) + ((consumed-200)*level_4)
     } else if (consumed<401) {
-        cost= (50*level_1) + (50*level_2) + (100*level_3) + (200*level_4) + ((consumed-300) *level_5)
+        bill= (50*level_1) + (50*level_2) + (100*level_3) + (100*level_4) + ((consumed-300) *level_5)
     } else {
-        cost= (50*level_1) + (50*level_2) + (100*level_3) + (200*level_4) + (300 *level_5) + ((consumed-400)*level_6)
+        bill= (50*level_1) + (50*level_2) + (100*level_3) + (100*level_4) + (100 *level_5) + ((consumed-400)*level_6)
     }
 
     alert("Tiền điện phải đóng là: " + cost + " đ")
