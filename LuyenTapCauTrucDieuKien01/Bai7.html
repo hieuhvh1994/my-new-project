@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01 Bài 7</title>
+</head>
+<body>
+<script>
+    let OldConsumed = parseInt(prompt("Chỉ số điện tiêu thụ sinh hoạt đầu kì (kWh): "))
+    let NewConsumed=parseInt(prompt("Chỉ số điện tiêu thụ sinh hoạt cuối kì (kWh): "))
+    let consumed= NewConsumed-OldConsumed
+    let level_1 = 1678;
+    let level_2 = 1734;
+    let level_3 = 2014;
+    let level_4 = 2536;
+    let level_5 = 2834;
+    let level_6 = 2972;
+    let cost=0;
+
+    if (consumed<51) {
+        cost= consumed*level_1
+    } else if (consumed<101) {
+        cost= (50*level_1) + ((consumed-50)*level_2)
+    } else if (consumed<201) {
+        cost= (50*level_1) + (50*level_2) + ((consumed-100)*level_3)
+    } else if (consumed<301) {
+        cost= (50*level_1) + (50*level_2) + (100*level_3) + ((consumed-200)*level_4)
+    } else if (consumed<401) {
+        cost= (50*level_1) + (50*level_2) + (100*level_3) + (200*level_4) + ((consumed-300) *level_5)
+    } else {
+        cost= (50*level_1) + (50*level_2) + (100*level_3) + (200*level_4) + (300 *level_5) + ((consumed-400)*level_6)
+    }
+
+    alert("Tiền điện phải đóng là: " + cost + " đ")
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01 Bài 5</title>
+</head>
+<body>
+    <script>
+        let testScore=parseInt(prompt("Nhập điểm bài kiểm tra: "))
+        let midSemesterScore=parseInt(prompt("Nhập điểm bài thi giữa kì: "))
+        let SemesterScore=parseInt(prompt("Nhập điểm bài thi học kì: "))
+
+        let StudentScore = (testScore + (midSemesterScore*2) + (SemesterScore*3))/6
+
+        if (StudentScore <5){
+            alert("Học sinh yếu")
+        } else if(StudentScore < 6) {
+            alert("Học sinh trung bình")
+        } else if(StudentScore < 8) {
+            alert("Học sinh tiên tiến")
+        } else if(StudentScore < 6) {
+            alert("Học sinh giỏi")
+        } else {
+            alert("Học sinh xuất sắc")
+        }
+
+    </script>
+</body>
+</html>
