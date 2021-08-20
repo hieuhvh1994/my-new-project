@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<label for="old">Chỉ số điện tiêu thụ sinh hoạt đầu kì (kWh): </label><br/>
+<input type="text" id="old"><br/>
+<br/>
+<label for="new">Chỉ số điện tiêu thụ sinh hoạt cuối kì (kWh): </label><br/>
+<input type="text" id="new"><br/>
+<br/>
+<input type="button" onclick="electricBill()" value="Tính tiền điện">
+<br/>
+<br/>
+<p id="result" style="font-weight: bolder"></p>
+
+<script>
+function electricBill(){
+    let OldConsumed = parseInt(document.getElementById("old").value)
+    let NewConsumed=parseInt(document.getElementById("new").value)
+    let consumed= NewConsumed-OldConsumed
+    let level_1 = 1678;
+    let level_2 = 1734;
+    let level_3 = 2014;
+    let level_4 = 2536;
+    let level_5 = 2834;
+    let level_6 = 2972;
+    let bill=0;
+
+    if (consumed<51) {
+        bill= consumed*level_1
+    } else if (consumed<101) {
+        bill= (50*level_1) + ((consumed-50)*level_2)
+    } else if (consumed<201) {
+        bill= (50*level_1) + (50*level_2) + ((consumed-100)*level_3)
+    } else if (consumed<301) {
+        bill= (50*level_1) + (50*level_2) + (100*level_3) + ((consumed-200)*level_4)
+    } else if (consumed<401) {
+        bill= (50*level_1) + (50*level_2) + (100*level_3) + (100*level_4) + ((consumed-300) *level_5)
+    } else {
+        bill= (50*level_1) + (50*level_2) + (100*level_3) + (100*level_4) + (100 *level_5) + ((consumed-400)*level_6)
+    }
+
+    document.getElementById("result").innerHTML = "Tiền điện phải đóng là: " + bill + " đ"
+
+}
+</script>
+</body>
+</html>
