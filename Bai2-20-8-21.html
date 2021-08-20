@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
 </head>
 <body>
-$END$
+<label for="level">Bậc lương: </label><br/>
+<input type="text" id="level"><br/>
+<br/>
+<label for="workingDays">Số ngày công: </label><br/>
+<input type="text" id="workingDays"><br/>
+<br/>
+<input type="button" onclick="calSalary()" value="Tính lương">
+<br/>
+<br/>
+<p id="result" style="font-weight: bolder"></p>
+
+<script>
+
+    function calSalary(){
+        let level = document.getElementById("level").value
+        let wrkdays = parseInt(document.getElementById("workingDays").value)
+        let salary;
+
+        switch (level){
+            case ("a"):
+            case ("A"):
+                salary = parseInt((5000000 * wrkdays)/22);
+                break;
+
+            case ("b"):
+            case ("B"):
+                salary = parseInt((6000000 * wrkdays)/23);
+                break;
+
+            case ("c"):
+            case ("C"):
+                salary = parseInt((8000000 * wrkdays)/23);
+                break;
+
+            case ("d"):
+            case ("D"):
+                salary = parseInt((10000000 * wrkdays)/23);
+                break;
+
+            default:
+                salary = "Không tính được";
+                break;
+        }
+        document.getElementById("result").innerHTML = "Số lương là: " + salary + " đ"
+    }
+</script>
 </body>
 </html>
