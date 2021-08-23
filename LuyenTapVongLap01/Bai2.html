@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 01 Bài 2</title>
+</head>
+<body>
+<script>
+
+    let temp = null
+
+    do{
+        temp = parseInt(prompt("Enter temperature: "))
+        if (temp < 20) {
+                alert("Enter higher temperature!!")
+        } else if (temp >100) {
+                alert("Enter lower temperature!!")
+        }
+    } while (temp<20 || temp >100)
+
+</script>
+</body>
+</html>

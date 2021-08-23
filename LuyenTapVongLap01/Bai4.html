@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 01 Bài 4</title>
+</head>
+<body>
+<script>
+    let f1=0
+    let f2=1
+
+    // document.write(f1 +" ")
+    for (let i=1; i<20; i++) {
+        let next = f1 + f2
+        f1 = f2
+        f2 = next
+        if (f1%5 ===0  ) {
+            document.write(f1 + " is divisible by 5")
+            break
+        }
+    }
+</script>
+</body>
+</html>

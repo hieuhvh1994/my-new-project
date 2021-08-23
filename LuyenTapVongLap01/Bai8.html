@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 01 Bài 8</title>
+</head>
+<body>
+<button type="button" id="play" onclick="game()">PLAY</button>
+<script>
+function game() {
+    let maxNum = parseInt(prompt("Enter the maximum range number you want to guess: "))
+    let count = 0
+    let randomNum = parseInt(Math.random() * maxNum)
+
+    let guessNum = null
+
+
+    do {
+        guessNum = parseInt(prompt("Guess Number: "))
+        if (guessNum < randomNum) {
+            alert("Try to guess higher number!!")
+        } else if (guessNum > randomNum) {
+            alert("Try to guess lower number!!")
+        }
+
+        count++
+
+    } while (guessNum < (randomNum || guessNum > randomNum) && count <3)
+
+
+
+    if (guessNum === randomNum && count < 3) {
+        alert("Congratulation!! You have guessed the right number!!")
+    } else {
+        alert("You have lost!! Try Again!!")
+    }
+}
+
+</script>
+</body>
+</html>
