@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 02 Bài 5</title>
 </head>
 <body>
-$END$
+<script>
+    let amount = parseInt(prompt("Loan amount (VND): "))
+    let term = parseInt(prompt("Loan term (month): "))
+    let bank_interest = parseFloat(prompt("Loan interest (%): ")/100).toFixed(3)
+
+    let monthly_interest = 0;
+    let amount_owed = amount;
+
+    for (let i=0;i<term;i++) {
+        monthly_interest = monthly_interest + (amount_owed * bank_interest)
+        amount_owed = amount_owed + monthly_interest
+    }
+
+    alert("Bank interest of Loan amount " + amount + " VND after " +term + " months at rate " + bank_interest*100+"% is: " + monthly_interest + " VND")
+
+</script>
 </body>
 </html>

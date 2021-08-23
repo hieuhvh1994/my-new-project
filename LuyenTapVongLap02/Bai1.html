@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 02 Bài 1</title>
 </head>
 <body>
-$END$
+<script>
+    let f1=0
+    let f2=1
+    let num = parseInt(prompt("Enter length of fibonacci: "))
+
+    document.write(f1 +" ")
+    for (let i=1; i<num; i++) {
+        document.write(f2 + " ")
+        let next = f1 + f2
+        f1 = f2
+        f2 = next
+    }
+</script>
 </body>
 </html>
