@@ -7,12 +7,15 @@
 <body>
 <script>
   let n = parseInt(prompt("Enter first range number: "))
+  let count = 0;
+  let i = n
 
-
-  for (let i=n;i<n+10;i++) {
+  while (count<5) {
       if (i%2 === 0) {
           document.write(i +" ")
+          count++
       }
+      i++
 
   }
 </script>
