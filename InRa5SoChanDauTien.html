@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Ra 5 Số Chẵn Đầu Tiên</title>
+</head>
+<body>
+<script>
+  let n = parseInt(prompt("Enter n numbers >11: "))
+  let count = 0;
+  while (n<11){
+      n = parseInt(prompt("Enter n numbers >11: "))
+  }
+
+  for (let i=1;i<n+1;i++) {
+      if (i%2 === 0) {
+          document.write(i +" ")
+          count++
+      }
+
+      if (count === 5) {
+          break;
+      }
+  }
+</script>
+</body>
+</html>
