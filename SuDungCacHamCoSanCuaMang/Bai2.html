@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng các hàm có sẵn của mảng Bài 2</title>
+</head>
+<body>
+<script>
+    let num=window.prompt();
+    let str = num.toString();
+    let arr = str.split("")
+    let result = []
+
+    for (let i = 0; i<arr.length; i++) {
+        console.log(" te " + i)
+        if (parseInt(arr[i])%2 === 0 && parseInt(arr[i+1])%2 === 0){
+            result.push(arr[i],"-")
+        } else {
+            result.push(arr[i])
+        }
+    }
+
+    console.log(result.join(""))
+
+
+
+</script>
+</body>
+</html>
