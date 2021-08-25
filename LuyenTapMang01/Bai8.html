@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01 Bài 8</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let isContain = false
+
+    while (arr.length <10) {
+        let num = parseInt(Math.random()* 30)
+        for (let i=0; i<arr.length;i++) {
+            if (arr[i] === num) {
+                isContain = true
+            }
+        }
+
+        if (isContain === false) {
+            arr.push(num)
+
+        } else {
+            isContain = false
+        }
+    }
+    document.write("Arrays: " + arr)
+
+    let result = arr.sort(function (a,b){return b-a});
+
+    document.write("</br>")
+    document.write("Sorted array: " + result)
+
+</script>
+</body>
+</html>

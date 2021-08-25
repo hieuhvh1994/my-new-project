@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01 Bài 4</title>
+</head>
+<body>
+<script>
+    let range =parseInt(prompt("Enter range of array: "))
+    let arr = [];
+    let isContain = false
+
+    while (arr.length <range) {
+        let num = parseInt(Math.random()* range)
+        for (let i=0; i<arr.length;i++) {
+            if (arr[i] === num) {
+                isContain = true
+            }
+        }
+
+        if (isContain === false) {
+            arr.push(num)
+
+        } else {
+            isContain = false
+        }
+    }
+
+
+    document.write("Arrays: " + arr)
+    let new_array = arr.reverse()
+
+    // let reversed_array = []
+    // let temp;
+    //
+    //
+    // for (let i=arr.length-1, j=0; i>0,j<arr.length; i--, j++) {
+    //     console.log(i)
+    //     console.log(j)
+    //     reversed_array[j] = arr[i]
+    //
+    // }
+
+
+
+
+    document.write("</br>")
+    document.write("Reversed Array: " + new_array)
+
+
+</script>
+</body>
+</html>

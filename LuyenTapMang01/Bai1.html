@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01 Bài 1</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i=0; i<10;i++) {
+        arr.push(parseInt(Math.random()* (20-1) +1))
+    }
+
+
+    let result =[];
+    for (let i=0;i<arr.length;i++) {
+        if (arr[i] >= 10) {
+            result.push(arr[i])
+        }
+    }
+
+    document.write("Arrays: " + arr)
+    document.write("</br>")
+    document.write("Numbers equal or larger than 10: " + result)
+    document.write("</br>")
+    document.write("Total numbers: " + result.length)
+
+
+</script>
+</body>
+</html>

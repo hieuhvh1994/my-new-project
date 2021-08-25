@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01 Bài 7</title>
+</head>
+<body>
+<p id="array"></p>
+</br>
+</br>
+<input type="text" id="input">
+</br>
+</br>
+<input type="button" id="btn" value="Delete number in the array" onclick="deleteNum()">
+</br>
+</br>
+<p id="result"></p>
+<script>
+    let arr = [];
+    let isContain = false
+
+    while (arr.length <10) {
+        let num = parseInt(Math.random()* 10)
+        for (let i=0; i<arr.length;i++) {
+            if (arr[i] === num) {
+                isContain = true
+            }
+        }
+
+        if (isContain === false) {
+            arr.push(num)
+
+        } else {
+            isContain = false
+        }
+    }
+
+    document.getElementById("array").innerText = arr
+
+    function deleteNum(){
+        let num_V = parseInt(document.getElementById("input").value)
+        if (arr.indexOf(num_V) !== -1) {
+            arr.splice(arr.indexOf(num_V),1)
+        }
+
+        document.getElementById("result").innerText = arr
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

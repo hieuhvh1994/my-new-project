@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01 Bài 9</title>
+</head>
+<body>
+<script>
+
+    let arr_a = [];
+    let arr_b = [];
+    let isContain = false
+
+    while (arr_a.length <10) {
+        let num = parseInt(Math.random()* 10)
+        for (let i=0; i<arr_a.length;i++) {
+            if (arr_a[i] === num) {
+                isContain = true
+            }
+        }
+
+        if (isContain === false) {
+            arr_a.push(num)
+
+        } else {
+            isContain = false
+        }
+    }
+
+
+    while (arr_b.length <10) {
+        let num = parseInt(Math.random()* 10)
+        for (let i=0; i<arr_b.length;i++) {
+            if (arr_b[i] === num) {
+                isContain = true
+            }
+        }
+
+        if (isContain === false) {
+            arr_b.push(num)
+
+        } else {
+            isContain = false
+        }
+    }
+
+    document.write("Array a: "+ arr_a)
+    document.write("</br>")
+    document.write("Array b: "+ arr_b)
+
+
+    let arr_c=arr_a.concat(arr_b)
+
+    document.write("</br>")
+    document.write("Array c: "+ arr_c)
+
+</script>
+
+</body>
+</html>

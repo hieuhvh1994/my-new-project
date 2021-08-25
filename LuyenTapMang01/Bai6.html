@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01 Bài 6</title>
+</head>
+<body>
+<script>
+
+    let arr = [];
+    let isContain = false
+
+    while (arr.length <10) {
+        let num = parseInt(Math.random()* 10)
+        for (let i=0; i<arr.length;i++) {
+            if (arr[i] === num) {
+                isContain = true
+            }
+        }
+
+        if (isContain === false) {
+            arr.push(num)
+
+        } else {
+            isContain = false
+        }
+    }
+
+
+    let num_V = parseInt(prompt("Enter an integer: "))
+    if (arr.indexOf(num_V) !== -1) {
+        document.write("Number " + num_V +" is at the position "+ arr.indexOf(num_V)+ " of the array: "+ arr)
+    } else {
+        document.write("Number " + num_V +" is not in the array: "+ arr)
+    }
+
+
+
+
+</script>
+</body>
+</html>
