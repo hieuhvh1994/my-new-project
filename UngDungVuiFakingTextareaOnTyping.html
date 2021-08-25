@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui Faking Textarea on Typing</title>
+</head>
+<body>
+<h2 style="padding-left: 30px">Type anything slowly</h2>
+<textarea id="txt" cols="40" rows="10" onkeydown="changeTxt()"></textarea>
+<script>
+    let str = " giờ đâu còn tâm trí follow amee"
+    let arr_show = str.split("")
+    let str_show ="";
+
+    function changeTxt() {
+        let inputTxt = document.getElementById("txt").value
+        let txtLength = inputTxt.length
+
+        if (txtLength > 0) {
+
+
+            for (let i = 1; i <=txtLength; i++) {
+                str_show += arr_show[i]
+                if (i === arr_show.length) {
+                    document.getElementById("txt").value = ""
+                    str_show = ""
+                }
+
+            }
+
+
+        }
+        document.getElementById("txt").value = str_show
+        str_show=""
+        setTimeout("changeTxt()", 1)
+
+
+
+    }
+
+</script>
+</body>
+</html>
