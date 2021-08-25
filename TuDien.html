@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+    <h1>Gõ từ tiếng anh về vật nuôi không viết hoa: </h1>
+    <input type="text" id="input">
+    </br>
+    </br>
+    <input type="button" id="btn" onclick="translateWord()" value="Translate">
+    </br>
+    </br>
+    <p id="result"></p>
+
+<script>
+    const eng_dict = ["dog", "cat", "duck", "chicken", "cow"]
+
+    const vie_dict = ["chó", "mèo", "vịt", "gà", "bò"]
+
+
+function translateWord() {
+    let input_word = document.getElementById("input").value.toString()
+    let pos = eng_dict.indexOf(input_word)
+
+
+    if (pos === -1) {
+        alert("Không tìm thấy từ này")
+    } else {
+        let result = vie_dict[pos]
+
+        document.getElementById("result").innerHTML ="Từ " + "'" + input_word+ "'" + " có nghĩa là: " + result
+    }
+
+}
+
+
+
+
+</script>
+</body>
+</html>
