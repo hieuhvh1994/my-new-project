@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 02 Bài 6</title>
+</head>
+<body>
+<script>
+    let inputStr = prompt("Enter a string: ").toString()
+    let arr = inputStr.split("")
+    let new_arr = "";
+    for (let i=0; i<arr.length; i++) {
+        if(arr[i] == "-") {
+            new_arr += "_"
+        }
+        else {
+            new_arr += arr[i]
+        }
+    }
+
+
+
+    document.write("</br>")
+    document.write("Replaced string: " + new_arr)
+
+</script>
+</body>
+</html>

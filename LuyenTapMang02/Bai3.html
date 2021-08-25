@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 02 Bài 3</title>
+</head>
+<body>
+<script>
+    let inputStr = prompt("Enter a string: ").toString()
+    let arr = inputStr.split("")
+    let lengthArr = arr.length
+    let count = 0
+
+    for (let i=0; i<lengthArr;i++) {
+        if (arr[i]=== "0"
+            || arr[i]=== "1"
+            || arr[i]=== "2"
+            || arr[i]=== "3"
+            || arr[i]=== "4"
+            || arr[i]=== "5"
+            || arr[i]=== "6"
+            || arr[i]=== "7"
+            || arr[i]=== "8"
+            || arr[i]=== "9") {
+            count += 1
+        }
+    }
+
+    document.write("Array: "+  arr)
+    document.write("</br>")
+    document.write("Total numbers: "+  count)
+</script>
+</body>
+</html>
