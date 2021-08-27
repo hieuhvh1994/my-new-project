@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02 Bài 3</title>
+</head>
+<body>
+<script>
+  function factorial(n){
+    if(n == 0 || n == 1){
+      return 1;
+    }else{
+      return n * factorial(n-1);
+    }
+  }
+
+  let inputNum = parseInt(prompt("Enter a number: "))
+  document.write(factorial(inputNum))
+</script>
+</body>
+</html>

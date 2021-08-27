@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02 Bài 7</title>
+</head>
+<body>
+<script>
+    function swapNums(n1, n2) {
+        let arr = []
+        arr.push(n1)
+        arr.push(n2)
+        let temp = arr[0]
+        arr[0]=arr[1]
+        arr[1] = temp
+
+        return arr
+    }
+
+    let num1 = parseInt(prompt("Enter the first number: "))
+    let num2 = parseInt(prompt("Enter the second number: "))
+
+
+    let arr_body = swapNums(num1, num2)
+
+
+    document.write("The first number: " + arr_body[0])
+    document.write("</br>")
+    document.write("The second number: " + arr_body[1])
+
+</script>
+</body>
+</html>

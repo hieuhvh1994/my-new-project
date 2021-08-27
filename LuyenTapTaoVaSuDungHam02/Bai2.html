@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02 Bài 2</title>
+</head>
+<body>
+<script>
+    function perimeterCircle(r) {
+        let C = 2*Math.PI*parseInt(r)
+        return C;
+    }
+
+    function areaCircle(r) {
+        let d = Math.PI*parseInt(r)*parseInt(r)
+        return d;
+    }
+
+    let radius = prompt("Enter radius of a circle: ")
+    document.write("Perimeter of the circle: " + perimeterCircle(radius))
+    document.write("</br>")
+    document.write("Area of the circle: " + areaCircle(radius))
+</script>
+</body>
+</html>
