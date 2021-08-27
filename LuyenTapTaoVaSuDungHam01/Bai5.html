@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 01 Bài 5</title>
+</head>
+<body>
+<input type="text" id="input">
+</br>
+<input type="button" value="Looking Star" onclick="lookingStar(document.getElementById('input').value)">
+<script>
+    let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let constellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function lookingStar(star){
+        if (stars.indexOf(star) !== -1) {
+            alert(constellations[stars.indexOf(star)])
+        } else {
+            alert("Unknown Star")
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
