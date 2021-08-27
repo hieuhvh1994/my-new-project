@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tông các số nguyên tố trong mảng</title>
+</head>
+<body>
+<script>
+    function isPrime(number){
+        for (let i=2; i<= Math.sqrt(number); i++) {
+            if (number%i ==0) {
+                return true
+            }
+        }
+        return false
+    }
+
+    function totalPrime(arr) {
+        let total = 0
+        for (let i=0; i< arr.length; i++) {
+            if (isPrime(arr[i]) == false) {
+                total += parseInt(arr[i])
+            }
+        }
+
+        return total
+
+    }
+
+    let arr = [1,2,3,4,5,6,7,8,9,10,11,12,15,17,124,42,3446,36]
+
+    document.write("Total of prime numbers in the array is: " + totalPrime(arr) )
+
+</script>
+</body>
+</html>
