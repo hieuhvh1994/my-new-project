@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+
+    function isPalindrome(s) {
+        let arr_forward = s.split()
+        let arr_reverse = s.split("").reverse()
+
+        let str_forward = arr_forward.join("")
+        let str_reverse = arr_reverse.join("")
+
+        if (str_forward === str_reverse) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    let inputStr = prompt("Enter a string: ")
+    if (isPalindrome(inputStr) === true) {
+        alert("The string is a palindrome!!")
+    } else {
+        alert("The string is not a palindrome!!")
+    }
+
+</script>
+</body>
+</html>
