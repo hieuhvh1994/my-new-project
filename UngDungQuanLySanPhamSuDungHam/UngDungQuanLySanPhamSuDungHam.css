@@ -1,0 +1,97 @@
+#table_add {
+    border-radius: 4px;
+    background-color: #f3f6fa;
+    width:400px;
+
+}
+
+#table_add tr {
+
+    height: 70px;
+    width: 600px;
+}
+
+#new_product {
+    padding-left: 10px;
+}
+
+#new_product_box {
+    border: 1px solid grey;
+    border-radius: 4px;
+    height: 30px;
+    width: 300px;
+}
+
+#add_btn {
+    border: 1px solid grey;
+    border-radius: 4px;
+    height: 35px;
+    background-color: #43a943;
+    color: white;
+    font-size: 11px;
+    width: 60px;
+    font-weight: bolder;
+}
+
+#td_add_btn {
+    padding-right: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    padding-left: 10px;
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding-left: 10px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    padding-left: 10px;
+}
+
+
+#total_product {
+    color: #a40a0a;
+    font-weight: bolder;
+}
+
+#table_products {
+    width: 40%;
+}
+
+
+
+#table_products tr:nth-child(odd) {
+    background-color: #f3f6fa;
+}
+
+#product_name_tag {
+    text-align: left;
+}
+
+#header th {
+    background-color: white;
+}
+
+.edit_btn {
+    border: 1px solid grey;
+    border-radius: 4px;
+    height: 35px;
+    background-color: #43a943;
+    color: white;
+    font-size: 11px;
+    width: 60px;
+    font-weight: bolder;
+}
+
+.delete_btn {
+    border: 1px solid grey;
+    border-radius: 4px;
+    height: 35px;
+    background-color: #43a943;
+    color: white;
+    font-size: 11px;
+    width: 70px;
+    font-weight: bolder;
+}
