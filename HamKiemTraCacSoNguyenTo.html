@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+
+    function isPrime(number){
+        for (let i=2; i<= Math.sqrt(number); i++) {
+            if (number%i ==0) {
+                return true
+            }
+        }
+        return false
+    }
+
+    let numbers = parseInt(prompt("Enter number of primes: "))
+    let count = 0
+    let N = 2
+
+    document.write("First " + numbers + " primes numbers are: ")
+
+
+    while (count<numbers) {
+        if (isPrime(N) === false) {
+            document.write(N + " ")
+            count++
+
+        }
+        N++
+
+    }
+
+
+</script>
+</body>
+</html>
