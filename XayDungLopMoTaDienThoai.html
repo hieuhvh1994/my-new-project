@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    function Mobile(name) {
+        this.name = name
+        this.battery = 100
+        this.message = ""
+        this.inbox = []
+        this.sent = []
+        this.isOn = true
+
+    }
+
+    Mobile.prototype.turnOnOff = function () {
+        if (this.isOn === true) {
+            return this.isOn = false
+        } else if (this.isOn === false && this.battery !== 0) {
+            return this.isOn = true
+        } else {
+            this.isOn = false
+        }
+    }
+
+    Mobile.prototype.charged = function () {
+        return this.battery = 100
+    }
+
+    Mobile.prototype.texting = function (message) {
+        if (this.isOn === false && this.battery === 0) {
+            return alert("The mobile is off")
+        } else {
+            this.battery -= 1
+            return this.message = message
+        }
+
+    }
+
+    Mobile.prototype.getInbox = function () {
+        if (this.isOn === false && this.battery === 0) {
+            return alert("The mobile is off")
+        } else {
+
+            this.battery -= 1
+            return this.inbox
+
+        }
+
+    }
+
+    Mobile.prototype.sendMessage = function (receiver) {
+        if (this.isOn === false && this.battery === 0) {
+            return alert("The mobile is off")
+        } else {
+            this.sent.push([receiver.name, this.message])
+            this.battery -= 1
+            return receiver.inbox.push([this.name, this.message])
+        }
+    }
+
+    Mobile.prototype.checkSent = function () {
+        if (this.isOn === false && this.battery === 0) {
+            return alert("The mobile is off")
+        } else {
+            return this.sent
+        }
+    }
+
+
+    let nokia = new Mobile("Nokia")
+
+    let iphone = new Mobile("Iphone")
+
+    console.log(nokia.name)
+
+
+    nokia.texting("hello")
+    nokia.sendMessage(iphone)
+
+    console.log(iphone.getInbox())
+
+    console.log(nokia.battery)
+    
+
+</script>
+</body>
+</html>
