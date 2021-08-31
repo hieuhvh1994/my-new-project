@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+<script>
+
+    //Apple
+    function Apple(weight) {
+        this.weight = weight
+    }
+
+    Apple.prototype.decrease = function () {
+        this.weight -= 0.1
+        return this.weight
+    }
+
+    Apple.prototype.isEmpty = function () {
+        return this.weight === 0;
+    }
+
+    Apple.prototype.getWeight = function () {
+        return this.weight
+    }
+
+    //Human
+    function Human(name, gender, weight) {
+        this.name = name
+        this.gender = gender
+        this.weight = weight
+    }
+
+    Human.prototype.isMale = function () {
+        return this.gender === "male" || this.gender === "Male" || this.gender === "m" || this.gender === "M" || this.gender === "MALE";
+    }
+
+    Human.prototype.setGender = function (gender) {
+        return this.gender = gender
+    }
+
+    Human.prototype.checkApple = function (Apple) {
+        return Apple.getWeight()
+    }
+
+    Human.prototype.eat = function (Apple) {
+        if (Apple.getWeight() > 0) {
+            this.weight += 0.1
+            Apple.decrease()
+        }
+
+    }
+
+    Human.prototype.say = function (String) {
+        return this.say = String
+    }
+
+    Human.prototype.getName = function () {
+        return this.name
+    }
+
+    Human.prototype.setName = function (name) {
+        return this.name = name
+    }
+
+    Human.prototype.getWeight = function () {
+        return this.weight
+    }
+
+    Human.prototype.setWeight = function (weight) {
+        return this.weight = weight
+    }
+
+    //Main Program
+
+    let apple = new Apple(1)
+
+    let adam = new Human("Adam", "Male", 65)
+    let eva = new Human("Eva", "Female", 40)
+
+    while (apple.getWeight()>0) {
+        adam.eat(apple)
+        eva.eat(apple)
+    }
+
+    console.log(apple.getWeight())
+    console.log(adam.getWeight())
+    console.log(eva.getWeight())
+
+
+
+
+
+</script>
+</body>
+</html>
