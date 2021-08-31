@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đơn giản - di chuyển đối tượng</title>
+</head>
+<body onkeydown="gameBoard.moveCar(event)">
+<canvas id="myCanvas" width="500px" height="500px"  style="border: 1px solid black"></canvas>
+
+
+
+<script>
+    const GAMEBOARD_WIDTH = 500
+    const GAMEBOARD_HEIGHT = 500
+
+    const ORIENTATION_LEFT = "carLeft";
+    const ORIENTATION_RIGHT = "carRight";
+    const ORIENTATION_UP = "carUp";
+    const ORIENTATION_DOWN = "carDown";
+
+    const CAR_WIDTH = 60;
+    const CAR_HEIGHT = 80;
+
+    const DEFAULT_CAR_X_POSITION = 200;
+    const DEFAULT_CAR_Y_POSITION = 200;
+    const DEFAULT_CAR_ORIENTATION = ORIENTATION_UP;
+    const DEFAULT_CAR_SPEED = 20;
+
+    function Car() {
+        this.width = CAR_WIDTH
+        this.height = CAR_HEIGHT
+        this.x = DEFAULT_CAR_X_POSITION
+        this.y = DEFAULT_CAR_Y_POSITION
+        this.orientation = DEFAULT_CAR_ORIENTATION
+        this.speed = DEFAULT_CAR_SPEED
+
+
+        this.buildImage = function() {
+            this.image = this.orientation + ".png"
+        }
+
+        this.buildImage()
+
+        this.run = function () {
+            switch (this.orientation) {
+                case ORIENTATION_DOWN:
+                    this.y += this.speed
+                    break;
+                case ORIENTATION_UP:
+                    this.y -= this.speed
+                    break;
+                case ORIENTATION_RIGHT:
+                    this.x += this.speed
+                    break;
+                case ORIENTATION_LEFT:
+                    this.x -= this.speed
+                    break;
+
+            }
+            this.buildImage()
+        }
+
+
+        this.show = function (ctx) {
+            let image = new Image()
+            let x = this.x
+            let y = this.y
+            image.onload = function () {
+                ctx.drawImage(image, x, y, CAR_WIDTH, CAR_HEIGHT)
+            }
+
+            image.src = this.image;
+        }
+
+    }
+
+
+    function GameBoard() {
+        this.car = new Car()
+        this.ctx = undefined
+
+
+        this.start = function () {
+            this.ctx = document.getElementById("myCanvas").getContext("2d")
+            this.car.show(this.ctx)
+
+        }
+
+
+        this.render = function () {
+            this.ctx.clearRect(0, 0, GAMEBOARD_WIDTH, GAMEBOARD_HEIGHT)
+            this.car.show(this.ctx)
+        }
+
+        this.moveCar = function (event) {
+            let orientation = 0;
+            switch (event.which) {
+                case 37:
+                    orientation = ORIENTATION_LEFT
+                    break;
+
+                case 38:
+                    orientation = ORIENTATION_UP
+                    break;
+
+                case 39:
+                    orientation = ORIENTATION_RIGHT
+                    break;
+
+                case 40:
+                    orientation = ORIENTATION_DOWN
+                    break;
+
+                case 17:
+                    this.car.speed += 1
+                    break;
+
+            }
+
+            if(orientation) {
+                if (this.car.orientation !== orientation) {
+                    this.car.orientation = orientation
+                } else {
+                    this.car.run()
+                }
+
+                this.render()
+            }
+
+            //Out side canvas box
+            if (this.car.x < 0 || this.car.x > 440 || this.car.y <0 || this.car.y > 420) {
+                // crash = false
+            }
+
+        }
+
+    }
+
+    let gameBoard = new GameBoard()
+    gameBoard.start()
+
+
+</script>
+</body>
+</html>
