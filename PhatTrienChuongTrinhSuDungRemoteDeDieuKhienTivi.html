@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển chương trình sử dụng Remote để điều khiển Tivi</title>
+</head>
+<body>
+<script>
+    class Remote {
+        code;
+
+        constructor(code) {
+            this.code = code
+        }
+
+        switchChannel(Tivi, channel) {
+            if (Tivi.isTurnOn === true) {
+                return Tivi.switchChannel(channel)
+            }
+
+        }
+
+        volume(Tivi, volume) {
+            if (Tivi.isTurnOn === true) {
+                return Tivi.changeVolume(volume)
+            }
+        }
+
+        turnOnOff(Tivi) {
+            if (Tivi.isTurnOn === true) {
+                return Tivi.isTurnOn = false
+            } else if (Tivi.isTurnOn === false) {
+                return  Tivi.isTurnOn = true
+            }
+        }
+
+    }
+
+    class Tivi {
+        channel;
+        volume;
+        isTurnOn;
+
+        constructor(channel, volume, isTurnOn) {
+            this.channel = channel
+            this.volume = volume
+            this.isTurnOn = isTurnOn
+        }
+
+        switchChannel(channel) {
+            this.channel = channel
+        }
+
+        changeVolume(volume) {
+            this.volume = volume
+        }
+    }
+
+
+    let tv = new Tivi(1, 20, false)
+    let remote = new Remote(203)
+
+    tv.isTurnOn = true
+
+    tv.switchChannel(7)
+
+    remote.switchChannel(tv, 3)
+
+    tv.changeVolume(70)
+
+    remote.turnOnOff(tv)
+
+
+    console.log(tv.channel)
+    console.log(tv.volume)
+    console.log(tv.isTurnOn)
+
+</script>
+</body>
+</html>
