@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    //Get the element
+    let element = parseInt(prompt("Enter the element: "))
+
+    //The Array
+    let arr = [1,2,3,4,5,6,7,8,9]
+
+
+    //The function to check the position of the element in the array
+    function checkPosElement(element, arr) {
+        let result = false
+        for (let i=0;i<arr.length;i++) {
+            if (element === arr[i]) {
+                result = i
+            }
+        }
+        //Check the result
+        if (result !== false) {
+            //Alert the result if the element is in the array
+            alert("The element " + element + " is in the array at the position " + result + "!!")
+        } else {
+            //Alert the result if the element is not in the array
+            alert("The element " + element + " is not in the array!!")
+        }
+    }
+
+    //Call the function
+    checkPosElement(element, arr)
+
+
+</script>
+</body>
+</html>

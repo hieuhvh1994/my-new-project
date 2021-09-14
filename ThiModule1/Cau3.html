@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    //Get the string input to check vowel in it
+    let str = prompt("Enter a string to check vowel: ")
+
+
+    //Function to get number of vowels in the string
+    function getNumberOfVowel(str) {
+        let result = false
+
+        //Split the string into characters
+        let str_arr = str.split("")
+
+        //Check the vowel is contained in the string
+        for (let i = 0; i<str_arr.length; i++) {
+            //If the vowel is in the string
+            if (str_arr[i] === "a" || str_arr[i] === "o" || str_arr[i] === "e" || str_arr[i] === "u" || str_arr[i] === "i") {
+                result += 1
+            }
+        }
+
+        return result
+
+    }
+
+    //Alert the result
+    if (getNumberOfVowel(str) !== false) {
+        //If the string has vowels
+        alert("The string has " + getNumberOfVowel(str) + " vowels!!")
+    } else {
+        //If the string has no vowel
+        alert("The string has no vowel!!")
+    }
+
+
+</script>
+</body>
+</html>

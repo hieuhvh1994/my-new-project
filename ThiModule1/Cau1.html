@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<form>
+<!--    Test the linear equation: 5x + 8 = 0-->
+    <label>Enter the integer a: </label>
+    </br>
+    <input type="text" id="a" value = "5">
+    </br>
+    </br>
+    <label>Enter the integer b: </label>
+    </br>
+    <input type="text" id="b" value = "8">
+    </br>
+    </br>
+    <input type="submit" onclick="solveLinearEquation()">
+</form>
+
+<script>
+    //Function solve the Linear Equation
+    function solveLinearEquation() {
+        //Get input
+        let a = parseInt(document.getElementById("a").value)
+        let b = parseInt(document.getElementById("b").value)
+
+        //Solving the linear equation
+        if (a===0) {
+            if (b===0) {
+                //Alert Result
+                alert("Infinitely Many Solutions")
+            } else {
+                //Alert Result
+                alert("No Solution")
+            }
+        } else {
+            //Get solution
+            let x = -b/a
+
+            //Alert Result
+            alert("The linear equation: " + a + "x + " + b +" = 0 has one solution! x = " + x)
+        }
+
+    }
+</script>
+</body>
+</html>
